@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-app lang="en">
+<head>
+    <meta charset="utf-8">
+    <link href="css/materialize.min.css" rel="stylesheet">
+    <link href="css/materialize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style type="text/css">
+      ul>li, a{cursor: pointer;}
+    </style>
+    <title>Agenda Telefónica</title>
+</head>
+<body>
+  <nav>
+<div class="nav-wrapper" id="navbar">
+  <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li><a href="index.html">Agenda Telefónica</a></li>
+      <li><a href="https://www.facebook.com/kaysinho" target="_blank">Créditos</a></li>
+    </ul>
+</div>
+</nav>
+
+
+  <div class="row">
+<div class="card col s12 m10 offset-m1">
+<div class="card-content">
+  <span class="card-title" style="color: gray !important">Agenda Telefónica</span>
+    <div ng-view="" id="ng-view"></div>
+</div>
+</div>
+</div>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/angular-route.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="app/app.js"></script>
+
+</body>
+
+</html>

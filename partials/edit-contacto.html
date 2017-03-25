@@ -1,0 +1,58 @@
+﻿<style type="text/css">
+  .form-horizontal input.ng-invalid.ng-dirty {
+    border-color: #FA787E;
+  }
+
+  .form-horizontal input.ng-valid.ng-dirty {
+    border-color: #78FA89;
+  }
+</style>
+<div class="view">
+    <div class="container">
+        <div class="row">
+        <header>
+            <h3>{{title}}</h3>
+        </header>
+        <div class="col-md-12">
+
+<form role="form" name="myForm" class="form-horizontal">
+<div class="row">
+<div class= "col s12 m6 l6 input-field" ng-class="{error: myForm.txtnombres.$invalid}">
+    <i class="material-icons prefix" title="Nombres y Apellidos">supervisor_account</i>
+    <input name="txtnombres" ng-model="contacto.Nombres" data-length="100" title="Nombres" class="validate" type= "text" placeholder="Nombres" required/>
+</div>
+<div class= "col s12 m6 l6 input-field">
+    <input name="txtapellidos" ng-model="contacto.Apellidos" data-length="100" title="Apellidos" class="validate" type= "text" placeholder="Apellidos" required/>
+</div>
+</div>
+<div class="row">
+<div class= "col s12 m4 l4 input-field">
+    <i class="material-icons prefix" title="Correo">email</i>
+    <input ng-model="contacto.Correo" name="txtcorreo" title="Correo" class="validate" data-length="100" type= "email" placeholder="Correo Electronico" required />
+</div>
+<div class= "col s12 m4 l4 input-field">
+    <i class="material-icons prefix" title="Telefono">phone</i>
+    <input ng-model="contacto.Telefono" name="txttelefono" title="Telefono" data-length="20"  class="validate" type= "number" placeholder="Telefono" required />
+</div>
+<div class= "col s12 m4 l4 input-field" title="Celular">
+      <i class="material-icons prefix" title="Telefono">stay_current_portrait</i>
+    <input ng-model="contacto.Celular" title="Celular" name="txtcelular" data-length="20" class="validate" placeholder="Celular" type= "number" required />
+</div>
+</div>
+<div class="row">
+<div class= "form-group">
+    <label class= "col-md-2"></label>
+    <div class="col-md-4">
+    <a href="#/" class="btn red">Cancelar</a>
+        <button ng-click="savecontacto(contacto);"
+                ng-disabled="isClean() || myForm.$invalid"
+                class="btn btn-primary">{{buttonText}}</button>
+        <button ng-click="deletecontacto(contacto)"
+                ng-show="contacto._id" class="btn orange darken-4">Eliminar</button>
+    </div>
+</div>
+</div>
+</form>
+        </div></div>
+    </div>
+</div>

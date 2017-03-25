@@ -1,0 +1,32 @@
+
+    <div class="row" ng-show="contactos.length > 0">
+      <div class="col s12 m3 input-field">
+        <a class="btn-floating btn-large waves-effect waves-light green"  title="Agregar nuevo contacto" href="#/edit-contacto/0"><i class="material-icons">add</i></a>
+      </div>
+        <table class="highlight">
+        <thead>
+        <th>Nombres&nbsp;</th>
+        <th>Apellidos&nbsp;</th>
+        <th>Correo&nbsp;</th>
+        <th>Telefono&nbsp;</th>
+        <th>Celular&nbsp;</th>
+        <th>Acciones&nbsp;</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="data in contactos">
+                <td>{{data.Nombres}}</td>
+                <td>{{data.Apellidos}}</td>
+                <td>{{data.Correo}}</td>
+                <td>{{data.Telefono}}</td>
+                <td>{{data.Celular}}</td>
+                <td><a href="#/edit-contacto/{{data.intId}}" title="Editar contacto" class="btn-floating waves-effect waves-light blue"><i class="material-icons">edit</i></a></td>
+            </tr>
+        </tbody>
+        </table>
+
+    </div>
+    <div class="row" ng-show="contactos.length == 0">
+        <div class="col m12 s12">
+            <h4>No hay contactos</h4>
+        </div>
+    </div>
